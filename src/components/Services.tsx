@@ -7,12 +7,12 @@ const services = [
     icon: <Briefcase className="text-gold" />,
   },
   {
-    title: "Bulk Meals",
+    title: "Food Distribution",
     description: "High-volume meal solutions for institutions, NGOs, and large organizations.",
     icon: <Users className="text-gold" />,
   },
   {
-    title: "Paying Guests",
+    title: "PG Meals",
     description: "Daily comfort and nutrition for students staying away from home.",
     icon: <GraduationCap className="text-gold" />,
   },

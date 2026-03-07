@@ -10,10 +10,10 @@ export default function Header() {
 
   const services = [
     { name: "Corporate Tiffin", href: "/corporate" },
-    { name: "Paying Guests", href: "/#services" },
+    { name: "PG Meals", href: "/#services" },
     { name: "Guru Food", href: "/#services" },
     { name: "Gathering Meals", href: "/#services" },
-    { name: "Bulk Meals", href: "/#services" },
+    { name: "Food Distribution", href: "/#services" },
   ];
 
   return (
@@ -27,6 +27,7 @@ export default function Header() {
       <nav className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-navy/80">
         <Link href="/" className="hover:text-gold transition-colors">Home</Link>
         <Link href="/about" className="hover:text-gold transition-colors">About Us</Link>
+        <Link href="/contact" className="hover:text-gold transition-colors">Contact Us</Link>
 
         <div
           className="relative group flex items-center gap-1 cursor-pointer hover:text-gold transition-colors py-2"
@@ -91,6 +92,13 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About Us
+            </Link>
+            <Link
+              href="/contact"
+              className="text-lg font-medium text-navy py-2 border-b border-gray-50"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact Us
             </Link>
             <div className="flex flex-col gap-2">
               <div className="text-lg font-medium text-navy py-2 flex items-center justify-between">

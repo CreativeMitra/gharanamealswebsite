@@ -114,10 +114,10 @@ export default function ContactPage() {
                   >
                     <option value="" disabled>Select a service</option>
                     <option value="corporate">Corporate Tiffin</option>
-                    <option value="pg">PG Meal Plans</option>
+                    <option value="pg">PG Meals</option>
                     <option value="guru">Guru Food</option>
                     <option value="gathering">Gathering Meals</option>
-                    <option value="bulk">Bulk Meals</option>
+                    <option value="food_distribution">Food Distribution</option>
                   </select>
                   <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
                     <svg className="w-4 h-4 text-navy/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
