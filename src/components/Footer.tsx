@@ -28,9 +28,10 @@ export default function Footer() {
             <h4 className="font-bold text-gold uppercase tracking-widest text-sm">Quick Links</h4>
             <ul className="space-y-4 text-white/60 text-sm">
               <li><Link href="/" className="hover:text-gold transition-colors">Home</Link></li>
-              <li><Link href="#services" className="hover:text-gold transition-colors">Our Services</Link></li>
-              <li><Link href="#menu" className="hover:text-gold transition-colors">Special Menus</Link></li>
-              <li><Link href="#corporate" className="hover:text-gold transition-colors">Corporate Plans</Link></li>
+              <li><Link href="/about" className="hover:text-gold transition-colors">About Us</Link></li>
+              <li><Link href="/#services" className="hover:text-gold transition-colors">Our Services</Link></li>
+              <li><Link href="/#menu" className="hover:text-gold transition-colors">Special Menus</Link></li>
+              <li><Link href="/#corporate" className="hover:text-gold transition-colors">Corporate Plans</Link></li>
             </ul>
           </div>
 

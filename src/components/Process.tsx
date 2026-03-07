@@ -23,7 +23,7 @@ export default function Process() {
   ];
 
   return (
-    <section className="px-8 py-32 bg-cream/30 border-y border-navy/5 overflow-hidden">
+    <section id="menu" className="px-8 py-32 bg-cream/30 border-y border-navy/5 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-5xl font-serif italic text-navy mb-4">

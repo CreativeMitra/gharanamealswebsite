@@ -7,7 +7,7 @@ const services = [
     icon: <Briefcase className="text-gold" />,
   },
   {
-    title: "Bulk Meals",
+    title: "Food Distribution",
     description: "High-volume meal solutions for institutions, NGOs, and large organizations.",
     icon: <Users className="text-gold" />,
   },
@@ -30,7 +30,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="px-8 py-24 bg-cream/50">
+    <section id="services" className="px-8 py-24 bg-cream/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-navy mb-4">
