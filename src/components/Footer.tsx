@@ -1,100 +1,73 @@
-import { Facebook, Mail, Phone, MapPin, Share2 } from "lucide-react";
+import { UtensilsCrossed, Globe, Share2, ThumbsUp } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
-  const services = [
-    "Corporate Tiffins",
-    "Bulk Meal Solutions",
-    "Student PG Plans",
-    "Event Catering",
-    "Guruji Prashad",
-  ];
-
-  const presence = ["Delhi", "Gurgaon", "Noida", "Ghaziabad", "Faridabad"];
-
   return (
-    <footer className="bg-[#1e2a4a] text-white/70 pt-24 pb-12 px-8 overflow-hidden relative">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24 relative z-10">
-        {/* Brand Section */}
-        <div className="space-y-8">
-          <div className="flex items-center gap-2">
-            <div className="text-gold text-2xl font-serif">🔱</div>
-            <div className="text-white text-xl font-serif font-bold tracking-tight">Gharana Meals</div>
+    <footer className="bg-navy text-white pt-20 pb-10 px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Company Info */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-2">
+              <UtensilsCrossed className="text-gold" size={28} />
+              <div className="text-2xl font-serif font-bold tracking-tight">Gharana Meals</div>
+            </div>
+            <p className="text-white/60 text-sm leading-relaxed max-w-xs">
+              Bringing the soul of Indian kitchens to your doorstep. Authentic,
+              hygienic, and prepared with love.
+            </p>
+            <div className="flex items-center gap-4 text-white/80">
+              <Globe size={20} className="cursor-pointer hover:text-gold transition-colors" />
+              <Share2 size={20} className="cursor-pointer hover:text-gold transition-colors" />
+              <ThumbsUp size={20} className="cursor-pointer hover:text-gold transition-colors" />
+            </div>
           </div>
-          <p className="text-sm leading-relaxed max-w-[280px]">
-            Bringing traditional Indian flavors and the warmth of home-style
-            cooking to Delhi NCR&apos;s homes and offices.
+
+          {/* Quick Links */}
+          <div className="space-y-6">
+            <h4 className="font-bold text-gold uppercase tracking-widest text-sm">Quick Links</h4>
+            <ul className="space-y-4 text-white/60 text-sm">
+              <li><Link href="/" className="hover:text-gold transition-colors">Home</Link></li>
+              <li><Link href="#services" className="hover:text-gold transition-colors">Our Services</Link></li>
+              <li><Link href="#menu" className="hover:text-gold transition-colors">Special Menus</Link></li>
+              <li><Link href="#corporate" className="hover:text-gold transition-colors">Corporate Plans</Link></li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div className="space-y-6">
+            <h4 className="font-bold text-gold uppercase tracking-widest text-sm">Support</h4>
+            <ul className="space-y-4 text-white/60 text-sm">
+              <li><Link href="#" className="hover:text-gold transition-colors">FAQs</Link></li>
+              <li><Link href="#" className="hover:text-gold transition-colors">Terms of Service</Link></li>
+              <li><Link href="#" className="hover:text-gold transition-colors">Privacy Policy</Link></li>
+              <li><Link href="#contact" className="hover:text-gold transition-colors">Contact Us</Link></li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div className="space-y-6">
+            <h4 className="font-bold text-gold uppercase tracking-widest text-sm">Newsletter</h4>
+            <p className="text-white/60 text-sm leading-relaxed">
+              Get updates on new menus and special offers.
+            </p>
+            <div className="flex">
+              <input
+                type="email"
+                placeholder="Email"
+                className="bg-navy-light/20 border border-white/10 rounded-l-md px-4 py-2.5 w-full focus:outline-none focus:ring-1 focus:ring-gold text-sm"
+              />
+              <button className="bg-gold text-white px-4 py-2.5 rounded-r-md text-sm font-bold hover:bg-gold/90 transition-colors">
+                Join
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-white/5 text-center">
+          <p className="text-white/30 text-[10px] uppercase tracking-widest">
+            © 2024 Gharana Meals. All rights reserved. Designed for Excellence.
           </p>
-          <div className="flex gap-4">
-            <button className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors">
-              <Facebook size={18} fill="currentColor" stroke="none" />
-            </button>
-            <button className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors">
-              <Share2 size={18} />
-            </button>
-          </div>
-        </div>
-
-        {/* Services Section */}
-        <div className="space-y-8">
-          <h3 className="text-gold uppercase tracking-widest text-xs font-bold">
-            Services
-          </h3>
-          <ul className="space-y-4 text-sm font-medium">
-            {services.map((item, index) => (
-              <li key={index}>
-                <a href="#" className="hover:text-white transition-colors">
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Presence Section */}
-        <div className="space-y-8">
-          <h3 className="text-gold uppercase tracking-widest text-xs font-bold">
-            Presence
-          </h3>
-          <ul className="space-y-4 text-sm font-medium">
-            {presence.map((item, index) => (
-              <li key={index}>
-                <a href="#" className="hover:text-white transition-colors">
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Contact Section */}
-        <div className="space-y-8">
-          <h3 className="text-gold uppercase tracking-widest text-xs font-bold">
-            Contact Us
-          </h3>
-          <ul className="space-y-4 text-sm font-medium">
-            <li className="flex items-center gap-4">
-              <Phone size={18} className="text-gold" />
-              <span>+91 98765 43210</span>
-            </li>
-            <li className="flex items-center gap-4">
-              <Mail size={18} className="text-gold" />
-              <a href="mailto:hello@gharanameals.com" className="hover:text-white">
-                hello@gharanameals.com
-              </a>
-            </li>
-            <li className="flex items-start gap-4">
-              <MapPin size={18} className="text-gold shrink-0 mt-0.5" />
-              <span>Sector 45, Gurgaon, Haryana</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto pt-12 border-t border-white/10 flex flex-col md:row items-center justify-between text-[10px] md:text-xs tracking-wide font-medium uppercase text-white/30 gap-6">
-        <p>© 2024 Gharana Meals. All rights reserved. Designed with tradition.</p>
-        <div className="flex gap-8">
-          <a href="#" className="hover:text-white/50 transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-white/50 transition-colors">Terms of Service</a>
         </div>
       </div>
     </footer>
