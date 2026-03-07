@@ -9,11 +9,11 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const services = [
-    { name: "Corporate Tiffin", href: "#services" },
-    { name: "PG Meal Plans", href: "#services" },
-    { name: "Guruji Prashad", href: "#services" },
-    { name: "Event Catering", href: "#services" },
-    { name: "Bulk Meals", href: "#services" },
+    { name: "Corporate Tiffin", href: "/#services" },
+    { name: "PG Meal Plans", href: "/#services" },
+    { name: "Guru Food", href: "/#services" },
+    { name: "Gathering Meals", href: "/#services" },
+    { name: "Bulk Meals", href: "/#services" },
   ];
 
   return (
@@ -51,7 +51,7 @@ export default function Header() {
           )}
         </div>
 
-        <Link href="#contact" className="hover:text-gold transition-colors">Contact</Link>
+        <Link href="/contact" className="hover:text-gold transition-colors">Contact</Link>
       </nav>
 
       <div className="flex items-center gap-4">
@@ -117,7 +117,7 @@ export default function Header() {
               Menu
             </Link>
             <Link
-              href="#contact"
+              href="/contact"
               className="text-lg font-medium text-navy py-2 border-b border-gray-50"
               onClick={() => setIsMobileMenuOpen(false)}
             >
