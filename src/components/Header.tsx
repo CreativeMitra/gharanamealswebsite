@@ -10,7 +10,7 @@ export default function Header() {
 
   const services = [
     { name: "Corporate Tiffin", href: "/corporate" },
-    { name: "PG Meal Plans", href: "/#services" },
+    { name: "Paying Guests", href: "/#services" },
     { name: "Guru Food", href: "/#services" },
     { name: "Gathering Meals", href: "/#services" },
     { name: "Bulk Meals", href: "/#services" },
@@ -27,8 +27,6 @@ export default function Header() {
       <nav className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-navy/80">
         <Link href="/" className="hover:text-gold transition-colors">Home</Link>
         <Link href="/about" className="hover:text-gold transition-colors">About Us</Link>
-        <Link href="/#menu" className="hover:text-gold transition-colors">Menu</Link>
-        <Link href="/corporate" className="hover:text-gold transition-colors">Corporate</Link>
 
         <div
           className="relative group flex items-center gap-1 cursor-pointer hover:text-gold transition-colors py-2"
@@ -54,8 +52,6 @@ export default function Header() {
             </div>
           )}
         </div>
-
-        <Link href="/contact" className="hover:text-gold transition-colors">Contact</Link>
       </nav>
 
       <div className="flex items-center gap-4">
@@ -113,27 +109,6 @@ export default function Header() {
                 ))}
               </div>
             </div>
-            <Link
-              href="/corporate"
-              className="text-lg font-medium text-navy py-2 border-b border-gray-50 text-gold"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Corporate
-            </Link>
-            <Link
-              href="/#menu"
-              className="text-lg font-medium text-navy py-2 border-b border-gray-50"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Menu
-            </Link>
-            <Link
-              href="/contact"
-              className="text-lg font-medium text-navy py-2 border-b border-gray-50"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
             <button className="sm:hidden mt-4 bg-gold text-white w-full py-4 rounded-md font-bold text-lg">
               Request Service
             </button>

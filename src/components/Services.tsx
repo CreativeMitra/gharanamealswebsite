@@ -7,22 +7,22 @@ const services = [
     icon: <Briefcase className="text-gold" />,
   },
   {
-    title: "Food Distribution",
+    title: "Bulk Meals",
     description: "High-volume meal solutions for institutions, NGOs, and large organizations.",
     icon: <Users className="text-gold" />,
   },
   {
-    title: "PG Meal Plans",
+    title: "Paying Guests",
     description: "Daily comfort and nutrition for students staying away from home.",
     icon: <GraduationCap className="text-gold" />,
   },
   {
-    title: "Event Catering",
+    title: "Gathering Meals",
     description: "Tailored menus for weddings, birthdays, and memorable corporate events.",
     icon: <PartyPopper className="text-gold" />,
   },
   {
-    title: "Guruji Prashad",
+    title: "Guru Food",
     description: "Dedicated service for Langar, Seva meals, and spiritual gatherings.",
     icon: <UtensilsCrossed className="text-gold" />,
   },
