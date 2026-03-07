@@ -9,32 +9,32 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const services = [
-    { name: "Corporate Tiffin", href: "/#services" },
+    { name: "Corporate Tiffin", href: "/corporate" },
     { name: "PG Meal Plans", href: "/#services" },
-    { name: "Guruji Prashad", href: "/#services" },
-    { name: "Event Catering", href: "/#services" },
-    { name: "Food Distribution", href: "/#services" },
+    { name: "Guru Food", href: "/#services" },
+    { name: "Gathering Meals", href: "/#services" },
+    { name: "Bulk Meals", href: "/#services" },
   ];
 
   return (
     <header className="flex items-center justify-between px-6 md:px-12 py-4 bg-white sticky top-0 z-50 border-b border-gray-50 shadow-sm">
-      <div className="flex items-center gap-2">
+      <Link href="/" className="flex items-center gap-2 cursor-pointer">
         <UtensilsCrossed className="text-gold" size={24} />
         <div className="text-navy text-xl font-serif font-bold tracking-tight">Gharana Meals</div>
-      </div>
+      </Link>
 
       {/* Desktop Navigation */}
       <nav className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-navy/80">
         <Link href="/" className="hover:text-gold transition-colors">Home</Link>
         <Link href="/about" className="hover:text-gold transition-colors">About Us</Link>
         <Link href="/#menu" className="hover:text-gold transition-colors">Menu</Link>
+        <Link href="/corporate" className="hover:text-gold transition-colors">Corporate</Link>
 
         <div
           className="relative group flex items-center gap-1 cursor-pointer hover:text-gold transition-colors py-2"
-          onMouseEnter={() => setIsServicesOpen(true)}
-          onMouseLeave={() => setIsServicesOpen(false)}
+          onClick={() => setIsServicesOpen(!isServicesOpen)}
         >
-          Services <ChevronDown size={14} />
+          Services <ChevronDown size={14} className={`transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
 
           {isServicesOpen && (
             <div className="absolute top-full left-0 mt-0 w-56 bg-white border border-gray-100 shadow-xl rounded-b-md overflow-hidden py-2 animate-in fade-in slide-in-from-top-2 duration-200">
@@ -43,6 +43,10 @@ export default function Header() {
                   key={service.name}
                   href={service.href}
                   className="block px-5 py-2.5 text-sm text-navy/80 hover:bg-gold/10 hover:text-gold transition-colors"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsServicesOpen(false);
+                  }}
                 >
                   {service.name}
                 </Link>
@@ -109,6 +113,13 @@ export default function Header() {
                 ))}
               </div>
             </div>
+            <Link
+              href="/corporate"
+              className="text-lg font-medium text-navy py-2 border-b border-gray-50 text-gold"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Corporate
+            </Link>
             <Link
               href="/#menu"
               className="text-lg font-medium text-navy py-2 border-b border-gray-50"
