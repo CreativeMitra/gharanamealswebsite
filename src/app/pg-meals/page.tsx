@@ -169,7 +169,7 @@ export default function PGMealsPage() {
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      setSelectedPlan(plan.id as unknown);
+                      setSelectedPlan(plan.id as "standard" | "premium");
                       setStep('review');
                     }}
                     className={`w-full py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-2 ${
