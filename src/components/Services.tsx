@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Briefcase, Users, GraduationCap, PartyPopper, UtensilsCrossed, ArrowRight } from "lucide-react";
 
 const services = [
@@ -5,26 +6,31 @@ const services = [
     title: "Corporate Tiffin",
     description: "Nutritious and balanced office lunches designed for the working professional.",
     icon: <Briefcase className="text-gold" />,
+    href: "/corporate",
   },
   {
     title: "Food Distribution",
     description: "High-volume meal solutions for institutions, NGOs, and large organizations.",
     icon: <Users className="text-gold" />,
+    href: "/#services",
   },
   {
     title: "PG Meals",
     description: "Daily comfort and nutrition for students staying away from home.",
     icon: <GraduationCap className="text-gold" />,
+    href: "/pg-meals",
   },
   {
     title: "Gathering Meals",
     description: "Tailored menus for weddings, birthdays, and memorable corporate events.",
     icon: <PartyPopper className="text-gold" />,
+    href: "/catering",
   },
   {
     title: "Guru Food",
     description: "Dedicated service for Langar, Seva meals, and spiritual gatherings.",
     icon: <UtensilsCrossed className="text-gold" />,
+    href: "/#services",
   },
 ];
 
@@ -41,8 +47,9 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <Link
               key={index}
+              href={service.href}
               className="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow group cursor-pointer"
             >
               <div className="mb-6 p-3 bg-cream inline-block rounded-xl group-hover:bg-gold/10 transition-colors">
@@ -54,7 +61,7 @@ export default function Services() {
               <p className="text-navy/60 leading-relaxed">
                 {service.description}
               </p>
-            </div>
+            </Link>
           ))}
 
           <div className="bg-white p-10 rounded-2xl shadow-sm flex flex-col items-center justify-center text-center">
