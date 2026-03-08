@@ -136,7 +136,7 @@ export default function PGMealsPage() {
                   className={`relative bg-white rounded-2xl border-2 p-8 transition-all hover:shadow-xl cursor-pointer ${
                     selectedPlan === plan.id ? 'border-gold ring-1 ring-gold/20' : 'border-gray-100 hover:border-gold/30'
                   }`}
-                  onClick={() => setSelectedPlan(plan.id as unknown)}
+                  onClick={() => setSelectedPlan(plan.id as "standard" | "premium")}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-white text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
