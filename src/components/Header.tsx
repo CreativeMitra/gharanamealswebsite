@@ -11,9 +11,9 @@ export default function Header() {
   const services = [
     { name: "Corporate Tiffin", href: "/corporate" },
     { name: "PG Meals", href: "/pg-meals" },
-    { name: "Guru Food", href: "/#services" },
+    { name: "Guru Food & Seva", href: "/guru-food" },
     { name: "Gathering Meals", href: "/catering" },
-    { name: "Food Distribution", href: "/#services" },
+    { name: "Food Distribution", href: "/food-distribution" },
   ];
 
   return (

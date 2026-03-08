@@ -12,7 +12,7 @@ const services = [
     title: "Food Distribution",
     description: "High-volume meal solutions for institutions, NGOs, and large organizations.",
     icon: <Users className="text-gold" />,
-    href: "/#services",
+    href: "/food-distribution",
   },
   {
     title: "PG Meals",
@@ -27,10 +27,10 @@ const services = [
     href: "/catering",
   },
   {
-    title: "Guru Food",
+    title: "Guru Food & Seva",
     description: "Dedicated service for Langar, Seva meals, and spiritual gatherings.",
     icon: <UtensilsCrossed className="text-gold" />,
-    href: "/#services",
+    href: "/guru-food",
   },
 ];
 

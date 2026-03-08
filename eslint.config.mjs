@@ -16,15 +16,8 @@ const eslintConfig = [
   },
   {
     rules: {
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unused-vars": "off",
-      "react/no-unescaped-entities": "off",
-      "@typescript-eslint/no-empty-object-type": "off",
-      "@typescript-eslint/no-unsafe-function-type": "off",
-      "@typescript-eslint/no-unused-expressions": "off",
-      "@typescript-eslint/no-this-alias": "off",
-      "@typescript-eslint/no-wrapper-object-types": "off",
-      "@next/next/no-assign-module-variable": "off"
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react/no-unescaped-entities": "off"
     }
   }
 ];
