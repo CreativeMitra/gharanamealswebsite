@@ -45,23 +45,38 @@ export default function Services() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Link
-              key={index}
-              href={service.href}
-              className="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow group cursor-pointer"
-            >
-              <div className="mb-6 p-3 bg-cream inline-block rounded-xl group-hover:bg-gold/10 transition-colors">
-                {service.icon}
+          {services.map((service, index) => {
+            const CardContent = (
+              <>
+                <div className="mb-6 p-3 bg-cream inline-block rounded-xl group-hover:bg-gold/10 transition-colors">
+                  {service.icon}
+                </div>
+                <h3 className="text-2xl font-serif text-navy mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-navy/60 leading-relaxed">
+                  {service.description}
+                </p>
+              </>
+            );
+
+            return service.href ? (
+              <Link
+                key={index}
+                href={service.href}
+                className="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow group cursor-pointer"
+              >
+                {CardContent}
+              </Link>
+            ) : (
+              <div
+                key={index}
+                className="bg-white p-10 rounded-2xl shadow-sm group"
+              >
+                {CardContent}
               </div>
-              <h3 className="text-2xl font-serif text-navy mb-4">
-                {service.title}
-              </h3>
-              <p className="text-navy/60 leading-relaxed">
-                {service.description}
-              </p>
-            </Link>
-          ))}
+            );
+          })}
 
           <div className="bg-white p-10 rounded-2xl shadow-sm flex flex-col items-center justify-center text-center">
             <h3 className="text-2xl font-serif text-navy mb-4">
